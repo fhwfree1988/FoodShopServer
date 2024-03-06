@@ -12,11 +12,26 @@ import java.util.List;
 /*@Entity*/
 @Document("CUSTOMER")
 @Data
-@NoArgsConstructor
+//@NoArgsConstructor
 public class CustomerEntity {
     @Id
     Long id ;
-    String name;
-    @ElementCollection
-    private List<AddressEntity> addresses;
+    String firstName;
+    String lastName;
+    /*@ElementCollection
+    private List<AddressEntity> addresses;*/
+
+    public CustomerEntity() {}
+
+    public CustomerEntity(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Customer[id=%s, firstName='%s', lastName='%s']",
+                id, firstName, lastName);
+    }
 }
