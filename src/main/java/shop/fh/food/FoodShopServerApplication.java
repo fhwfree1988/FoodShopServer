@@ -12,7 +12,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication
 @ComponentScan("shop")
 @EntityScan("shop")
-@EnableMongoRepositories("shop")
+//@EnableMongoRepositories("shop")
+@EnableMongoRepositories
 public class FoodShopServerApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
