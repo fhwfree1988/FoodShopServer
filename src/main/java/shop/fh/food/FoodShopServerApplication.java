@@ -1,6 +1,5 @@
 package shop.fh.food;
 
-import jakarta.transaction.TransactionManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +10,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import shop.fh.food.customer.CustomerEntity;
-import shop.fh.food.customer.CustomerReporsitory;
+import shop.fh.food.customer.CustomerRepository;
 
 @SpringBootApplication
 @ComponentScan("shop")
@@ -20,7 +19,7 @@ import shop.fh.food.customer.CustomerReporsitory;
 @EnableMongoRepositories
 public class FoodShopServerApplication extends SpringBootServletInitializer implements CommandLineRunner {
     @Autowired
-    private CustomerReporsitory repository;
+    private CustomerRepository repository;
     public static void main(String[] args) {
         SpringApplication.run(FoodShopServerApplication.class, args);
     }

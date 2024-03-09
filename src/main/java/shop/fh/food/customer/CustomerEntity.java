@@ -1,10 +1,13 @@
 package shop.fh.food.customer;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+import org.springframework.data.mongodb.core.mapping.Field;
 import shop.fh.food.address.AddressEntity;
 
 import java.util.List;
@@ -15,11 +18,18 @@ import java.util.List;
 //@NoArgsConstructor
 public class CustomerEntity {
     @Id
-    Long id ;
+    @Field("id")
+    @JsonIgnore
+    private String id;
+    @Field("object_id")
+    private Long objectId;
+
     String firstName;
     String lastName;
-    /*@ElementCollection
-    private List<AddressEntity> addresses;*/
+
+    //@OneToMany(fetch = FetchType.LAZY)
+    @DocumentReference
+    private List<AddressEntity> addresses;
 
     public CustomerEntity() {}
 
