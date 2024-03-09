@@ -20,16 +20,12 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
-        </dependency>
+        </dependency>-->
         <!--Security-->
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>
@@ -92,19 +88,11 @@
         <!-- 1. Hibernate OGM Infinispan module; pulls in the OGM core module -->
         <!--<dependency>
             <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-infinispan-embedded</artifactId>
-        </dependency>-->
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-mongodb</artifactId>
             <version>5.4.1.Final</version>
-        </dependency>
+        </dependency>-->
 
         <!-- 2. Optional, needed to run JPQL queries only  -->
-        <!--<dependency>
-            <groupId>org.hibernate.search</groupId>
-            <artifactId>hibernate-search-orm</artifactId>
-        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.hibernate.search/hibernate-search-mapper-orm -->
         <dependency>
             <groupId>org.hibernate.search</groupId>
@@ -113,12 +101,12 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.jboss.narayana.jta/narayana-jta -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.jboss.narayana.jta</groupId>
             <artifactId>narayana-jta</artifactId>
             <version>7.0.1.Final</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 

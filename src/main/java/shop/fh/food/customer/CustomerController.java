@@ -12,6 +12,6 @@ public class CustomerController {
 
     @GetMapping("name")
     public String getApi(){
-        return "Hello";
+        return "hello customer";
     }
 }
