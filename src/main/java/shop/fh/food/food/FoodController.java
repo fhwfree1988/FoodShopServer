@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
+@CrossOrigin
 @RestController("foodcontroller")
 @RequestMapping("food")
 public class FoodController {
@@ -26,8 +27,8 @@ public class FoodController {
 
 
     @PostMapping("add")
-    public void addFood(@RequestBody FoodEntity food){
-        foodRepository.save(food);
+    public FoodEntity addFood(@RequestBody FoodEntity food){
+        return foodRepository.save(food);
     }
     @GetMapping("find")
     public Optional<FoodEntity> findFoodById(@RequestParam String id){
@@ -35,6 +36,6 @@ public class FoodController {
     }
     @GetMapping("find-by-category")
     public Optional<List<FoodEntity>> findFoodByCategory(@RequestParam FoodCategoryEntity category){
-        return foodRepository.findByCategoryEquals(category);
+        return null; //foodRepository.findByCategoryEquals(category);
     }
 }

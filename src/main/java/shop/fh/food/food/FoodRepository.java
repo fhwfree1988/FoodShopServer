@@ -9,6 +9,6 @@ import java.util.Optional;
 
 public interface FoodRepository extends MongoRepository<FoodEntity, String> {
 
-    Optional<List<FoodEntity>> findByCategoryEquals(FoodCategoryEntity category);
+    //Optional<List<FoodEntity>> findByCategoryEquals(FoodCategoryEntity category);
 
 }
