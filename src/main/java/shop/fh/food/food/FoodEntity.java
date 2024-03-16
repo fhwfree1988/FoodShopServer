@@ -35,7 +35,7 @@ public class FoodEntity {
     @Override
     public String toString() {
         return String.format(
-                "Food[id=%s, firstName='%s']",
+                "Food[id=%s, title='%s',cost='%s']",
                 id, cost);
     }
 }
