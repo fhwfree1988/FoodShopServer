@@ -32,8 +32,4 @@ public class AddressController {
         return addressRepository.findById(id);
     }
 
-    @GetMapping("find-by-category")
-    public Optional<AddressEntity> findAddressByCategory(@RequestParam FoodCategoryEntity category){
-        return null;// addressRepository.find(id);
-    }
 }
