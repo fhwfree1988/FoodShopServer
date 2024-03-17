@@ -10,6 +10,7 @@ import java.util.Optional;
 @Controller
 @CrossOrigin
 public class BaseController<E> {
+
     public void setRepository(BaseRepository repository) {
         this.repository = repository;
     }
