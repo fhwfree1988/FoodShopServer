@@ -10,13 +10,9 @@ import java.util.Optional;
 @Controller
 @CrossOrigin
 public class BaseController<E> {
-
+    private BaseRepository repository;
     public void setRepository(BaseRepository repository) {
         this.repository = repository;
-    }
-
-    private BaseRepository repository;
-    public BaseController() {
     }
     @PostMapping("add")
     public void add(@RequestBody E food){

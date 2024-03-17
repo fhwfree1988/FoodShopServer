@@ -9,7 +9,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface FoodRepository extends BaseRepository<FoodEntity, String> {
-
     //Optional<List<FoodEntity>> findByCategoryEquals(FoodCategoryEntity category);
-
 }
