@@ -3,15 +3,15 @@ package shop.fh.food.customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import shop.fh.food.address.AddressEntity;
+import shop.fh.food.common.BaseController;
 import shop.fh.food.foodcategory.FoodCategoryEntity;
 
 import java.util.List;
 import java.util.Optional;
 
-@Controller
 @RestController("customerController")
 @RequestMapping("customer")
-public class CustomerController {
+public class CustomerController extends BaseController {
 
     private CustomerRepository customerRepository;
 

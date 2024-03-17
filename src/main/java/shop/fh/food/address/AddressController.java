@@ -2,15 +2,16 @@ package shop.fh.food.address;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import shop.fh.food.common.BaseController;
 import shop.fh.food.foodcategory.FoodCategoryEntity;
 
 import java.util.Optional;
 
 
-@Controller
+
 @RestController("addressController")
 @RequestMapping("address")
-public class AddressController {
+public class AddressController extends BaseController {
 
     private AddressRepository addressRepository;
 
