@@ -1,6 +1,5 @@
 package shop.fh.food.common;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import shop.fh.food.foodcategory.FoodCategoryEntity;
